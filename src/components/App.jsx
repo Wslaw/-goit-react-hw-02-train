@@ -1,16 +1,19 @@
-export const App = () => {
+// ШАГ 3.  Імпортуємо компонент MainMenu
+import MainMenu from "./MainMenu/MainMenu";
+// ШАГ 5. Імпортуємо JSON
+import menuItems from "./data/menu.json";
+
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="App">
+      <MainMenu items={menuItems} />
+      {
+      //   const obj = new MainMenu({items: menuItems});
+      // obj.render();
+      }
     </div>
   );
 };
+
+export default App;

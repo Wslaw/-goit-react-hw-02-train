@@ -1,0 +1,53 @@
+
+/* Изначально: */
+/* .main-menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-menu-link{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid red;
+    color: red;
+    text-decoration: none;
+
+}
+
+.main-menu-link.active{
+    background-color: red;
+    color: white;
+} */
+/* *************************************************** */
+/* А так как єто CSS модуль то можно упростить: */
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+gap: 20px;
+}
+
+.link{
+    background-color: #bbd0dc;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgb(78, 142, 210);
+    border-radius: 10px;
+    color: rgb(71, 145, 195);
+    text-decoration: none;
+font-size: 24px;
+font-weight: 700;
+}
+
+.link:hover{
+    background-color: red;
+}
+.link.active:hover{
+background-color: #bbd0dc;
+}
+.link.active{
+    background-color: rgb(197, 144, 244);
+    color: white;
+}
