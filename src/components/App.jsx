@@ -2,16 +2,17 @@
 import MainMenu from "./MainMenu/MainMenu";
 // ШАГ 5. Імпортуємо JSON
 import menuItems from "./data/menu.json";
-
+import ToggleButton from './ToggleButton/ToggleButton'
 
 function App() {
   return (
     <div className="App">
       <MainMenu items={menuItems} />
       {
-      //   const obj = new MainMenu({items: menuItems});
-      // obj.render();
+        //   const obj = new MainMenu({items: menuItems});
+        // obj.render();
       }
+      <ToggleButton text='Click me'/>
     </div>
   );
 };
