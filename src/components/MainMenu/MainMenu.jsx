@@ -14,7 +14,12 @@ class MainMenu extends Component {
         /* Super(props) Викликає конструктор батьківського класу */
         // Пропси будут достурні в рендері через this
     //   super(props);
-    // }
+  // }
+  
+  static defaultProps = {
+  items: []
+}
+
     state = {
     activeIndex: 0,
     }

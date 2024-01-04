@@ -2,26 +2,37 @@ import { Component } from 'react';
 import styles from './toggle-button.module.css';
 
 class ToggleButton extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.onClick = this.handelclick.bind(this);
+  // }
+  static defaultProps = {
+    type: 'submit',
+  };
+
   state = {
     active: false,
     // active: true,
   };
 
-    handelclick = () => {
-        console.log(this)
-        const { active: prevActive } = this.state;
-        this.setState({
-            active: !prevActive 
-        })
-    }
+  handelclick = () => {
+        // const { active: prevActive } = this.state;
+    this.setState(prevState => {
+      return {
+        active: !prevState.active
+      }
+    })
+  };
   render() {
-    const { text } = this.props;
-      const { active } = this.state;
+    const { text, type } = this.props;
+    const { active } = this.state;
 
-      const fullClassName = active ? `${styles.btn} ${styles.active}` : styles.btn;
+    const fullClassName = active
+      ? `${styles.btn} ${styles.active}`
+      : styles.btn;
 
     return (
-      <button onClick={this.handelclick} type="submit" className={fullClassName}>
+      <button onClick={this.handelclick} type={type} className={fullClassName}>
         {text}
       </button>
     );
