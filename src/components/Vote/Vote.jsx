@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Block from './Block/Block';
 import VoteActions from './VoteActions';
 import VoteResults from './VoteResults';
 import styles from './vote.module.css';
@@ -58,13 +59,16 @@ class Vote extends Component {
 
     return (
       <div className={styles.wrapper}>
-        <VoteActions options={Vote.voteOptions} leaveVote={this.leaveVote} />
-
-        <VoteResults
-          total={total}
-          democratePercantage={democratePercantage}
-          republicantePercantage={republicantePercantage}
-        />
+        <Block title="Leave yuor vote">
+          <VoteActions options={Vote.voteOptions} leaveVote={this.leaveVote} />
+        </Block>
+        <Block title ="Result">
+          <VoteResults
+            total={total}
+            democratePercantage={democratePercantage}
+            republicantePercantage={republicantePercantage}
+          />
+        </Block>
       </div>
     );
   }

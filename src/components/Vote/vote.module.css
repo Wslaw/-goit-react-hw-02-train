@@ -4,19 +4,7 @@
     margin-top: 30px;
 }
 
-.block{
-    border: 1px solid;
-    border-radius: 15px;
-    padding: 5px 15px 15px;
-    width: 300px;
-    
-}
 
-.blockTitle{
-    font-size: 18px;
-    font-weight: bold;
-    
-}
 .btn{
     color: rgb(34, 32, 141);
     margin: 10px;
